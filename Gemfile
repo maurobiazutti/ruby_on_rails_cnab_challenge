@@ -16,8 +16,8 @@ gem "bootsnap", require: false
 gem "kamal", require: false
 gem "thruster", require: false
 gem "devise"
-# gem "bcrypt", "~> 3.1.7"
-# gem "image_processing", "~> 1.2"
+gem "devise_token_auth"
+gem "rack-cors"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
