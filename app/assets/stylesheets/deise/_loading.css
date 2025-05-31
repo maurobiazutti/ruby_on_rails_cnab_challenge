@@ -1,0 +1,11 @@
+.actions input[type="submit"]:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.actions input[type="submit"]:disabled:hover {
+  background: #9ca3af;
+  transform: none;
+  box-shadow: none;
+}

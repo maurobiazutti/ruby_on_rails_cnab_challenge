@@ -1,0 +1,39 @@
+/* error */
+.error_explanation {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.error_explanation h2 {
+  color: #dc2626;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.error_explanation ul {
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+/* warning */
+.cancel-warning {
+  background-color: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin: 1rem 0;
+  color: #9f1239;
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+}
+
+.cancel-warning::before {
+  content: "ℹ️";
+  margin-right: 0.5rem;
+}
+

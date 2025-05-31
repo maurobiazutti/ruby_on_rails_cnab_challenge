@@ -1,0 +1,3 @@
+.account-cancel-section [data-turbo-confirm] {
+  position: relative;
+}

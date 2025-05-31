@@ -1,0 +1,44 @@
+/* section */
+.account-cancel-section {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--danger-color);
+}
+
+/* heading */
+.account-cancel-section h3 {
+  color: var(--danger-color);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.account-cancel-section h3::before {
+  content: "⚠️";
+  margin-right: 0.5rem;
+  font-size: 1.2em;
+}
+
+/* content */
+.account-cancel-content {
+  margin-bottom: 1.5rem;
+}
+
+.account-cancel-content p {
+  color: #7f1d1d;
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+}
+
+/* actions */
+.account-cancel-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}

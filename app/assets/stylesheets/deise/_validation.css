@@ -1,0 +1,8 @@
+.field input:valid {
+  border-color: #10b981;
+}
+
+.field input:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
