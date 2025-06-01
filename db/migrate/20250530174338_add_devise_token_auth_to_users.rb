@@ -1,12 +1,12 @@
 class AddDeviseTokenAuthToUsers < ActiveRecord::Migration[8.0]
   def change
-     # Campos necessários para o DeviseTokenAuth
+    # Campos necessários para o DeviseTokenAuth
     add_column :users, :provider, :string, null: false, default: "email"
     add_column :users, :uid, :string, null: false, default: ""
     add_column :users, :tokens, :text
 
     # Índices para performance
-    add_index :users, [:uid, :provider], unique: true
+    add_index :users, [ :uid, :provider ], unique: true
 
     # Preencher os campos existentes
     reversible do |dir|
