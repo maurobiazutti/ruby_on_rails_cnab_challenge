@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # Rotas de Upload de Arquivos
-  resources :uploads, only: [:new, :create]
-  
+  resources :uploads, only: [ :new, :create ]
+
   # Rotas WEB - Devise padrão
   devise_for :users
 
