@@ -1,23 +1,5 @@
-<h1>Upload de Arquivo .txt</h1>
+<h1>Fazer Upload .txt</h1>
 
-<%= form_with(model: @uploaded_file, url: uploads_path, local: true) do |form| %>
-  <% if @uploaded_file.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@uploaded_file.errors.count, "error") %> prohibited this upload from being saved:</h2>
-      <ul>
-        <% @uploaded_file.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= form.label :file, "Selecione o arquivo .txt" %><br>
-    <%= form.file_field :file, accept: '.txt' %>
-  </div>
+<%= render "form", upload: @upload %>
 
-  <div class="actions">
-    <%= form.submit "Fazer Upload" %>
-  </div>
-<% end %>
