@@ -11,7 +11,7 @@ class UploadsController < ApplicationController
     if @uploaded_file.save
       redirect_to root_path, notice: "Arquivo enviado com sucesso."
     else
-      render :new
+      render 'home/index', status: :unprocessable_entity
     end
   end
 
