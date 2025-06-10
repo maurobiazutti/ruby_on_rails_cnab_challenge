@@ -8,6 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+# Create default transaction types
 TransactionType.create!([
   { code: 1, description: "Débito", nature: "Entrada", signal: "+" },
   { code: 2, description: "Boleto", nature: "Saída", signal: "-" },
