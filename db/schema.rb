@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_06_10_022651) do
+ActiveRecord::Schema[8.0].define(version: 2025_06_13_005132) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -63,7 +63,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_06_10_022651) do
   create_table "transactions", force: :cascade do |t|
     t.date "date"
     t.string "time"
-    t.decimal "value"
+    t.decimal "value", precision: 10, scale: 2
     t.bigint "store_id", null: false
     t.bigint "transaction_type_id", null: false
     t.datetime "created_at", null: false
