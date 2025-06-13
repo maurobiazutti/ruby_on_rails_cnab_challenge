@@ -1,3 +1,31 @@
 <h1>Bem Vindo!</h1>
 <hr> <br>
 <%= render 'uploads/form', upload: @upload %>
+<br> <hr> <br>
+
+<div>
+  <% @transactions.each do |transaction| %>
+
+    <h2>Transação</h2>
+    <p>
+      <strong>id:</strong>
+      <%= transaction.id %> 
+    </p>
+
+    <p>
+      <strong>data:</strong>
+    <%= transaction.date %> 
+    </p>
+
+    <p>
+      <strong>hora:</strong>
+      <%= transaction.time %>
+    </p>
+
+    <p>
+      <strong>valor:</strong>
+      <%= number_to_currency(transaction.value, unit: "R$") %>
+    </p>
+    <hr>
+  <% end %>
+</div>
