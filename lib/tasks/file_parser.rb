@@ -1,12 +1,12 @@
-
 require 'date'
+require 'bigdecimal'
 
 class FileParser
   def self.import_from_file(path)
     File.foreach(path) do |line|
       transaction_type_code = line[0..0].to_i
       date = Date.strptime(line[1..8], "%Y%m%d")
-      value = line[9..18].to_i / 100.0
+      value = BigDecimal(line[9..18]).to_i / 100.0
       cpf = line[19..29].strip
       card = line[30..41].strip
       time = Time.strptime(line[42..47], "%H%M%S").strftime("%H:%M:%S")
