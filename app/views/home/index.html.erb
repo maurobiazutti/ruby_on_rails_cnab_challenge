@@ -5,26 +5,15 @@
 
 <div>
   <% @transactions.each do |transaction| %>
-
     <h2>Transação</h2>
     <p>
-      <strong>id:</strong>
-      <%= transaction.id %> 
-    </p>
-
-    <p>
-      <strong>data:</strong>
-    <%= transaction.date %> 
-    </p>
-
-    <p>
-      <strong>hora:</strong>
-      <%= transaction.time %>
-    </p>
-
-    <p>
-      <strong>valor:</strong>
-      <%= number_to_currency(transaction.value, unit: "R$") %>
+      <strong>id:</strong> <%= transaction.id %> <br>
+      <strong>data:</strong> <%= transaction.date %> <br>
+      <strong>hora:</strong> <%= transaction.time %> <br>
+      <strong>Proprietario:</strong> <%= transaction.store.owner_name %><br>
+      <strong>Loja:</strong> <%= transaction.store.store_name %> <br>
+      <strong>Tipo:</strong> <%= transaction.transaction_type.description %><br>
+      <strong>valor:</strong> <%= number_to_currency(transaction.value, unit: "R$ ") %> <br>
     </p>
     <hr>
   <% end %>
